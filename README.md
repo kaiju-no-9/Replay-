@@ -1,5 +1,9 @@
 # Relay
 
+
+https://github.com/user-attachments/assets/cc1b18fa-4f03-498b-8481-2d4e2baba9df
+
+
 Relay is a local-first engineering cockpit with two connected workflows: **Build** runs coding agents in isolated Git worktrees and compares their changes; **Investigate** gathers read-only Kubernetes and optional telemetry evidence, drafts an RCA, and can hand a reviewed report into a gated fix workflow.
 
 ## Quick start
