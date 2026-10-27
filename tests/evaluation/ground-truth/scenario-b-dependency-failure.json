@@ -1,0 +1,1 @@
+{"scenarioId":"scenario-dependency-failure","secretLabel":"GT_DOWNSTREAM_TIMEOUT","expectedRootCause":"Checkout requests time out after the payment dependency becomes unhealthy","requiredEvidenceKeys":["dependency-health","timeout-rate","trace"],"requiredRegressionPattern":"payment.*timeout"}

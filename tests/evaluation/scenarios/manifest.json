@@ -1,0 +1,5 @@
+[
+  {"scenarioId":"scenario-bad-deployment","name":"Bad Deployment Rollout","telemetryFixture":"bad-deployment.json"},
+  {"scenarioId":"scenario-dependency-failure","name":"Downstream Dependency Failure","telemetryFixture":"dependency-failure.json"},
+  {"scenarioId":"scenario-resource-saturation","name":"Resource Saturation","telemetryFixture":"resource-saturation.json"}
+]

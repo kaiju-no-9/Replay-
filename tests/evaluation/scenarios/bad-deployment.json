@@ -1,0 +1,1 @@
+{"service":"checkoutservice","signals":[{"key":"rollout","kind":"deployment","summary":"Version 2.4.1 rollout observed"},{"key":"error-rate","kind":"metric","summary":"HTTP 500 rate increased"},{"key":"trace","kind":"trace","summary":"Checkout request fails in payment handler"},{"key":"log","kind":"log","summary":"Null currency field error"}]}

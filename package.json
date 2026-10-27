@@ -1,0 +1,24 @@
+{
+  "name": "relay",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Relay — Browser-First Multi-Agent Coding Cockpit",
+  "engines": {
+    "node": ">=22.0.0 <23.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @relay/contracts build && concurrently -n runtime,web -c blue,magenta \"pnpm --filter @relay/runtime dev\" \"pnpm --filter @relay/web dev\"",
+    "dev:runtime": "pnpm --filter @relay/runtime dev",
+    "dev:web": "pnpm --filter @relay/web dev",
+    "build": "pnpm --filter @relay/contracts build && pnpm --filter @relay/runtime build && pnpm --filter @relay/web build",
+    "test": "pnpm --filter @relay/runtime test",
+    "postinstall": "node scripts/ensure-node-pty-helper-executable.mjs",
+    "typecheck": "pnpm --filter @relay/contracts build && pnpm --filter @relay/runtime typecheck && pnpm --filter @relay/web typecheck",
+    "clean": "pnpm -r exec rm -rf node_modules dist"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "typescript": "^5.7.0"
+  }
+}

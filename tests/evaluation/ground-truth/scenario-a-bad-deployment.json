@@ -1,0 +1,1 @@
+{"scenarioId":"scenario-bad-deployment","secretLabel":"GT_BAD_DEPLOYMENT_V241","expectedRootCause":"Payment handler rejects null currency after deployment","requiredEvidenceKeys":["rollout","error-rate","trace","log"],"requiredRegressionPattern":"currency.*null"}

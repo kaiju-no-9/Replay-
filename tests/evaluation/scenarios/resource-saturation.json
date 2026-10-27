@@ -1,0 +1,1 @@
+{"service":"worker","signals":[{"key":"cpu-throttle","kind":"metric","summary":"CPU throttling increased"},{"key":"queue-latency","kind":"metric","summary":"Queue latency increased"},{"key":"error-rate","kind":"metric","summary":"Worker timeout errors increased"}]}

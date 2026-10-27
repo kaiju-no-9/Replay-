@@ -1,0 +1,1 @@
+{"service":"checkoutservice","signals":[{"key":"dependency-health","kind":"metric","summary":"Payment dependency availability decreased"},{"key":"timeout-rate","kind":"metric","summary":"Dependency timeout rate increased"},{"key":"trace","kind":"trace","summary":"Request blocked at payment dependency"}]}

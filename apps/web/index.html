@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hackernoon/pixel-icon-library@main/fonts/iconfont.css" />
+    <script>
+      (() => {
+        const saved = localStorage.getItem('relay-theme');
+        document.documentElement.dataset.theme = saved || 'dark';
+      })();
+    </script>
+    <title>Relay — Multi-Agent Cockpit</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

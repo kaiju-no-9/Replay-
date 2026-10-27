@@ -1,0 +1,1 @@
+{"scenarioId":"scenario-resource-saturation","secretLabel":"GT_RESOURCE_SATURATION","expectedRootCause":"Worker saturation causes queue latency and request failures","requiredEvidenceKeys":["cpu-throttle","queue-latency","error-rate"],"requiredRegressionPattern":"queue.*capacity"}

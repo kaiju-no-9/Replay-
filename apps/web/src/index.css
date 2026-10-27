@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: var(--ds-font-mono);
+  --color-background: var(--ds-bg);
+  --color-foreground: var(--ds-text);
+  --color-card: var(--ds-surface);
+  --color-card-foreground: var(--ds-text);
+  --color-popover: var(--ds-surface-raised);
+  --color-popover-foreground: var(--ds-text);
+  --color-primary: var(--ds-inverse-bg);
+  --color-primary-foreground: var(--ds-inverse-text);
+  --color-secondary: var(--ds-surface-raised);
+  --color-secondary-foreground: var(--ds-text);
+  --color-muted: var(--ds-surface-soft);
+  --color-muted-foreground: var(--ds-text-muted);
+  --color-accent: var(--ds-surface-soft);
+  --color-accent-foreground: var(--ds-text);
+  --color-destructive: var(--ds-danger);
+  --color-border: var(--ds-border);
+  --color-input: var(--ds-border-strong);
+  --color-ring: var(--ds-focus);
+  --color-bg-base: var(--ds-bg);
+  --color-bg-surface: var(--ds-surface-raised);
+  --color-bg-card: var(--ds-surface-soft);
+  --color-bg-elevated: var(--ds-surface-raised);
+  --color-bg-hover: var(--ds-surface-soft);
+  --color-border-subtle: var(--ds-border);
+  --color-border-default: var(--ds-border-strong);
+  --color-border-focus: var(--ds-focus);
+  --color-text-primary: var(--ds-text);
+  --color-text-secondary: var(--ds-text-muted);
+  --color-text-muted: var(--ds-text-subtle);
+}
+
+:root {
+  color-scheme: dark;
+  --ds-font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ds-font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --ds-bg: #0a0a0a;
+  --ds-surface: #0a0a0a;
+  --ds-surface-raised: #171717;
+  --ds-surface-soft: #1f1f1f;
+  --ds-border: #404040;
+  --ds-border-strong: #525252;
+  --ds-text: #e5e5e5;
+  --ds-text-muted: #a3a3a3;
+  --ds-text-subtle: #a3a3a3;
+  --ds-link: #bdbdbd;
+  --ds-link-hover: #fafafa;
+  --ds-inverse-bg: #f5f5f5;
+  --ds-inverse-text: #171717;
+  --ds-focus: #93c5fd;
+  --ds-accent: #f59e0b;
+  --ds-success: #4ade80;
+  --ds-danger: #fda4af;
+  font-family: var(--ds-font-sans);
+  background: var(--ds-bg);
+  color: var(--ds-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --ds-bg: #f5f5f5;
+  --ds-surface: #f5f5f5;
+  --ds-surface-raised: #e5e5e5;
+  --ds-surface-soft: #eeeeee;
+  --ds-border: #d4d4d4;
+  --ds-border-strong: #a3a3a3;
+  --ds-text: #171717;
+  --ds-text-muted: #525252;
+  --ds-text-subtle: #636363;
+  --ds-link: #404040;
+  --ds-link-hover: #171717;
+  --ds-inverse-bg: #171717;
+  --ds-inverse-text: #f5f5f5;
+  --ds-focus: #1d4ed8;
+  --ds-accent: #b45309;
+  --ds-success: #15803d;
+  --ds-danger: #be123c;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { min-width: 320px; min-height: 100%; margin: 0; }
+body { min-height: 100vh; background: var(--ds-bg); color: var(--ds-text); font-size: 14px; line-height: 1.55; }
+button, input, select, textarea { color: inherit; font: inherit; border-radius: 2px; }
+button { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+:focus-visible { outline: 2px solid var(--ds-focus) !important; outline-offset: 2px; }
+::selection { background: var(--ds-inverse-bg); color: var(--ds-inverse-text); }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--ds-bg); }
+::-webkit-scrollbar-thumb { background: var(--ds-border-strong); border: 2px solid var(--ds-bg); }
+
+.relay-shell { background: var(--ds-bg); color: var(--ds-text); }
+.relay-sidebar { background: var(--ds-surface-raised); border-color: var(--ds-border); }
+.relay-header, .relay-inspector { background: var(--ds-bg); border-color: var(--ds-border); }
+.relay-main { background: var(--ds-bg); }
+.relay-brand-mark { background: var(--ds-inverse-bg); color: var(--ds-inverse-text); }
+.relay-nav-item { min-height: 40px; border: 1px solid transparent; color: var(--ds-text-muted); }
+.relay-nav-item:hover { background: var(--ds-surface-soft); color: var(--ds-text); }
+.relay-nav-item[aria-current="page"] { border-color: var(--ds-border); background: var(--ds-surface-soft); color: var(--ds-text); font-weight: 600; }
+.relay-control { min-width: 36px; min-height: 36px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--ds-border); background: transparent; color: var(--ds-text-muted); }
+.relay-control:hover { color: var(--ds-text); background: var(--ds-surface-soft); }
+.relay-kicker { color: var(--ds-text-subtle); font: 11px/1.4 var(--ds-font-mono); letter-spacing: .04em; }
+.relay-icon { display: inline-flex; width: 16px; height: 16px; flex: 0 0 16px; align-items: center; justify-content: center; font-size: 16px; line-height: 1; }
+.relay-attribution { color: var(--ds-text-subtle); font-size: 10px; line-height: 1.4; text-decoration: underline; text-underline-offset: 2px; }
+.relay-attribution:hover { color: var(--ds-text); }
+.relay-panel { border: 1px solid var(--ds-border); background: var(--ds-surface); border-radius: 2px; box-shadow: none; }
+.relay-primary { background: var(--ds-inverse-bg); color: var(--ds-inverse-text); border: 1px solid var(--ds-inverse-bg); }
+.relay-primary:hover:not(:disabled) { opacity: .86; }
+.relay-selected { border-color: var(--ds-accent) !important; }
+
+/* Existing utility-based screens use these legacy palette classes. Keep them on the shared tokens. */
+[class*="bg-[#090d16]"], [class*="bg-[#0a0a0a]"], [class*="bg-[#0f172a]"], [class*="bg-[#182234]"], [class*="bg-[#1e293b]"] { background-color: var(--ds-surface) !important; }
+[class*="border-[#1e293b]"], [class*="border-[#334155]"], [class*="border-slate-700"], [class*="border-slate-800"] { border-color: var(--ds-border) !important; }
+[class~="text-white"], [class*="text-slate-200"], [class*="text-slate-300"] { color: var(--ds-text) !important; }
+[class*="text-slate-400"], [class*="text-slate-500"], [class*="text-slate-600"] { color: var(--ds-text-muted) !important; }
+[class*="rounded-xl"], [class*="rounded-2xl"], [class*="rounded-lg"], [class*="rounded-full"] { border-radius: 2px !important; }
+[class*="shadow-"] { box-shadow: none !important; }
+[class*="bg-gradient-to-"] { background-image: none !important; background-color: var(--ds-inverse-bg) !important; color: var(--ds-inverse-text) !important; }
+[class*="bg-sky-600"], [class*="bg-indigo-600"] { background-color: var(--ds-inverse-bg) !important; color: var(--ds-inverse-text) !important; }
+[class*="hover:bg-sky-500"]:hover, [class*="hover:bg-indigo-500"]:hover { background-color: var(--ds-inverse-bg) !important; opacity: .86; }
+[class*="border-sky-500"], [class*="border-indigo-500"] { border-color: var(--ds-accent) !important; }
+input[type="range"] { accent-color: var(--ds-accent); }
+textarea, input, select { background-color: var(--ds-bg) !important; border-color: var(--ds-border-strong) !important; color: var(--ds-text) !important; }
+textarea::placeholder, input::placeholder { color: var(--ds-text-subtle) !important; }
+.ascii-input:focus { border-color: var(--ds-focus) !important; }
+.ascii-input:focus { border-color: var(--ds-focus) !important; }
+
+@media (max-width: 760px) {
+  .relay-sidebar { width: 56px !important; }
+  .relay-main { padding: 16px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
